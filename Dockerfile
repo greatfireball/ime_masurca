@@ -14,3 +14,6 @@ WORKDIR /opt/
 
 RUN wget ftp://ftp.genome.umd.edu/pub/MaSuRCA/latest/MaSuRCA-3.2.3.tar.gz && tar xzf MaSuRCA-3.2.3.tar.gz && rm MaSuRCA-3.2.3.tar.gz
 
+WORKDIR MaSuRCA-3.2.3
+
+RUN BOOST_ROOT=install ./install.sh
