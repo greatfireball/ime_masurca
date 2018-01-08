@@ -9,3 +9,8 @@ RUN apt update && apt install --yes \
     wget \
     zlib1g-dev \
     libbz2-dev
+
+WORKDIR /opt/
+
+RUN wget ftp://ftp.genome.umd.edu/pub/MaSuRCA/latest/MaSuRCA-3.2.3.tar.gz && tar xzf MaSuRCA-3.2.3.tar.gz && rm MaSuRCA-3.2.3.tar.gz
+
