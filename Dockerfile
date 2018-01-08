@@ -21,3 +21,7 @@ RUN BOOST_ROOT=install ./install.sh
 VOLUME /data
 
 WORKDIR /data
+
+ENV MASURCAPATH=/opt/MaSuRCA-3.2.3
+ENV PATH=$MASURCAPATH/bin:$PATH
+ENV SR_CONFIG_EXAMPLE=$MASURCAPATH/sr_config_example.txt
