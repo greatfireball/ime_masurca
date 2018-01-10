@@ -17,8 +17,8 @@ RUN apt update && apt install --yes --no-install-recommends \
     cd MaSuRCA-3.2.3 && \
     ./install.sh && \
     apt remove --yes \
-        build-essential \
-        curl
+        curl && \
+    rm -rf /var/lib/apt/lists/*
 
 VOLUME /data
 
