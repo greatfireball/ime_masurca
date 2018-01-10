@@ -9,6 +9,8 @@ RUN apt update && apt install --yes --no-install-recommends \
         build-essential \
 	libboost-dev \
         curl \
+        file \
+        libstatistics-descriptive-perl \
         zlib1g-dev \
         libbz2-dev && \
     curl ftp://ftp.genome.umd.edu/pub/MaSuRCA/latest/MaSuRCA-3.2.3.tar.gz > MaSuRCA-3.2.3.tar.gz && \
