@@ -8,18 +8,16 @@ WORKDIR /opt/
 RUN apt update && apt install --yes \
         build-essential \
         curl \
-        wget \
         zlib1g-dev \
         libbz2-dev && \
-    wget ftp://ftp.genome.umd.edu/pub/MaSuRCA/latest/MaSuRCA-3.2.3.tar.gz && \
+    curl ftp://ftp.genome.umd.edu/pub/MaSuRCA/latest/MaSuRCA-3.2.3.tar.gz > MaSuRCA-3.2.3.tar.gz && \
     tar xzf MaSuRCA-3.2.3.tar.gz && \
     rm MaSuRCA-3.2.3.tar.gz && \
     cd MaSuRCA-3.2.3 && \
     BOOST_ROOT=install ./install.sh && \
     apt remove --yes \
         build-essential \
-        curl \
-        wget
+        curl
 
 VOLUME /data
 
