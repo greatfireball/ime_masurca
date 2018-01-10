@@ -5,7 +5,7 @@ LABEL description="Dockerfile providing the MaSuRCA hybrid assembler"
 
 WORKDIR /opt/
 
-RUN apt update && apt install --yes \
+RUN apt update && apt install --yes --no-install-recommends \
         build-essential \
 	libboost-dev \
         curl \
