@@ -7,6 +7,7 @@ WORKDIR /opt/
 
 RUN apt update && apt install --yes \
         build-essential \
+	libboost-dev \
         curl \
         zlib1g-dev \
         libbz2-dev && \
@@ -14,7 +15,7 @@ RUN apt update && apt install --yes \
     tar xzf MaSuRCA-3.2.3.tar.gz && \
     rm MaSuRCA-3.2.3.tar.gz && \
     cd MaSuRCA-3.2.3 && \
-    BOOST_ROOT=install ./install.sh && \
+    ./install.sh && \
     apt remove --yes \
         build-essential \
         curl
