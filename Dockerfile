@@ -13,10 +13,10 @@ RUN apt update && apt install --yes --no-install-recommends \
         libstatistics-descriptive-perl \
         zlib1g-dev \
         libbz2-dev && \
-    curl ftp://ftp.genome.umd.edu/pub/MaSuRCA/latest/MaSuRCA-3.2.3.tar.gz > MaSuRCA-3.2.3.tar.gz && \
-    tar xzf MaSuRCA-3.2.3.tar.gz && \
-    rm MaSuRCA-3.2.3.tar.gz && \
-    cd MaSuRCA-3.2.3 && \
+    curl ftp://ftp.genome.umd.edu/pub/MaSuRCA/latest/MaSuRCA-3.2.4.tar.gz > MaSuRCA-3.2.4.tar.gz && \
+    tar xzf MaSuRCA-3.2.4.tar.gz && \
+    rm MaSuRCA-3.2.4.tar.gz && \
+    cd MaSuRCA-3.2.4 && \
     ./install.sh && \
     apt remove --yes \
         curl && \
@@ -26,7 +26,7 @@ VOLUME /data
 
 WORKDIR /data
 
-ENV MASURCAPATH=/opt/MaSuRCA-3.2.3
+ENV MASURCAPATH=/opt/MaSuRCA-3.2.4
 ENV PATH=$MASURCAPATH/bin:$PATH
 ENV SR_CONFIG_EXAMPLE=$MASURCAPATH/sr_config_example.txt
 
