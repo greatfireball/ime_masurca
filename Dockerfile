@@ -18,12 +18,12 @@ WORKDIR /opt/
 
 RUN apt update && apt install --yes --no-install-recommends \
         build-essential \
-	libboost-dev \
         curl \
         file \
+	libboost-dev \
+        libbz2-dev \
         libstatistics-descriptive-perl \
-        zlib1g-dev \
-        libbz2-dev && \
+        zlib1g-dev && \
     curl https://github.com/alekseyzimin/masurca/releases/download/3.2.6/MaSuRCA-3.2.6.tar.gz > MaSuRCA-3.2.6.tar.gz && \
     tar xzf MaSuRCA-3.2.6.tar.gz && \
     rm MaSuRCA-3.2.6.tar.gz && \
