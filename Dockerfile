@@ -19,19 +19,17 @@ WORKDIR /opt/
 RUN apt update && apt install --yes --no-install-recommends \
         build-essential \
 	ca-certificates \
-        curl \
         file \
 	libboost-dev \
         libbz2-dev \
         libstatistics-descriptive-perl \
+        wget \
         zlib1g-dev && \
-    curl https://github.com/alekseyzimin/masurca/releases/download/3.2.6/MaSuRCA-3.2.6.tar.gz > MaSuRCA-3.2.6.tar.gz && \
+    wget -O MaSuRCA-3.2.6.tar.gz https://github.com/alekseyzimin/masurca/releases/download/3.2.6/MaSuRCA-3.2.6.tar.gz && \
     tar xzf MaSuRCA-3.2.6.tar.gz && \
     rm MaSuRCA-3.2.6.tar.gz && \
     cd MaSuRCA-3.2.6 && \
     ./install.sh && \
-    apt remove --yes \
-        curl && \
     rm -rf /var/lib/apt/lists/*
 
 VOLUME /data
