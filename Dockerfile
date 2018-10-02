@@ -18,6 +18,7 @@ WORKDIR /opt/
 
 RUN apt update && apt install --yes --no-install-recommends \
         build-essential \
+	ca-certificates \
         curl \
         file \
 	libboost-dev \
