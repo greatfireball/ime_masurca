@@ -25,10 +25,10 @@ RUN apt update && apt install --yes --no-install-recommends \
         libstatistics-descriptive-perl \
         wget \
         zlib1g-dev && \
-    wget -O MaSuRCA-3.2.6.tar.gz https://github.com/alekseyzimin/masurca/releases/download/3.2.6/MaSuRCA-3.2.6.tar.gz && \
-    tar xzf MaSuRCA-3.2.6.tar.gz && \
-    rm MaSuRCA-3.2.6.tar.gz && \
-    cd MaSuRCA-3.2.6 && \
+    wget -O MaSuRCA-3.2.7.tar.gz https://github.com/alekseyzimin/masurca/releases/download/3.2.7/MaSuRCA-3.2.7.tar.gz && \
+    tar xzf MaSuRCA-3.2.7.tar.gz && \
+    rm MaSuRCA-3.2.7.tar.gz && \
+    cd MaSuRCA-3.2.7 && \
     ./install.sh && \
     rm -rf /var/lib/apt/lists/*
 
@@ -36,7 +36,7 @@ VOLUME /data
 
 WORKDIR /data
 
-ENV MASURCAPATH=/opt/MaSuRCA-3.2.6
+ENV MASURCAPATH=/opt/MaSuRCA-3.2.7
 ENV PATH=$MASURCAPATH/bin:$PATH
 ENV SR_CONFIG_EXAMPLE=$MASURCAPATH/sr_config_example.txt
 
